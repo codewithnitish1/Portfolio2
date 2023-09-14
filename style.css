@@ -1,0 +1,237 @@
+    *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+:root{
+  --col1: #fff;
+  --col2: #FF9100;
+}
+html{
+  font-size: 6.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
+body{
+  background: #1F242D;
+}
+/*header section css starts*/
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  box-shadow: 0 0 10px #FF9100;
+}
+.logo{
+  font-size: 25px;
+  color: white;
+  font-weight: 600px;
+  cursor: default;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+span{
+  color: var(--col2);
+}
+.navbar a{
+  display: inline-block;
+  font-size: 18px;
+  color: var(--col1);
+  font-weight: 500;
+  margin-left: 35px;
+  transition: .1s;
+  opacity: 0;
+  animation: slideTop .5s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+}
+.navbar a:hover,
+ .navbar a.active{
+  color: var(--col2);
+}
+/*header secation css end*/
+.home{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 5% ;
+}
+.home-content{
+  flex: 1 1 40rem;
+  max-width: 850px;
+}
+.home-content h3:nth-of-type(2) {
+ margin-bottom: 30px;
+ opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: .7s;
+}
+.home-content h3{
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--col1);
+  opacity: 0;
+  animation: slideBotton 1s ease forwards;
+  animation-delay: .7s;
+}
+.home-content h1{
+  font-size: 56px;
+  font-weight: 700;
+  margin: 3px 0;
+  color: var(--col1);
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1s
+}
+.home-content p {
+  font-size: 16px;
+  color: var(--col1);
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s
+}
+.home-img img{
+  max-width: 450px;
+  margin-right: -20px;
+  opacity: 1;
+  animation:  ZoomIn 4s ease forwards, floatImage 4s ease-in-out infinite;
+  animation-delay: 3s, 2s;
+}
+
+i{
+  color: white;
+}
+.social-link a{
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid var(--col2);
+  border-radius: 50%;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 15px 30px 0;
+  transition: .5s ease;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+}
+.social-link a:hover{
+  background: var(--col2);
+  color: var(--col1);
+  box-shadow:  0 0 20px  var(--col2);
+}
+.btn{
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--col2);
+  color: white;
+  border-radius: 50px;
+  box-shadow:  0 0 10px #FF9600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 2s
+}
+
+ @keyframes ZomeIn {
+  0%{
+    transform: Calc(0);
+    opacity: 0;
+  }
+  100%{
+    transform: Calc(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes slideRight {
+  0%{
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideLeft {
+  0%{
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideTop {
+  0%{
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideBotton {
+  0%{
+    transform: translateZ(-100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+@keyframes floatImage{
+  0%{
+    transform: translateY(0);
+    
+  }
+  50%{
+    transform: translateY(-24px);
+    
+  }
+  100%{
+    transform: translateY(0);
+    
+  }
+}
+
+#menu-bar{
+  font-size: 3rem;
+  cursor: pointer;
+  color: #6666;
+  border: 1rem solid #666;
+  border-radius: 3rem;
+  padding: 2rem 1.5rem;
+}
+
+#menu-bar{
+  font-size: 3rem;
+  cursor: pointer;
+  color: #666;
+  border: .1rem solid #666;
+  border-radius: 3rem;
+  padding: 5rem 1.5rem;
+  display: none;
+}
